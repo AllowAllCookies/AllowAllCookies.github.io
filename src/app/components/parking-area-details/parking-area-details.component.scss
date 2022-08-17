@@ -1,0 +1,16 @@
+.container {
+  display: inline-block;
+  border: 2px solid rebeccapurple;
+  width: 70%;
+  margin: 30px;
+  overflow: auto;
+  height: 500px;
+  border: 1px solid steelblue;
+  padding: 30px;
+  border-radius: 5px;
+  &button {
+    position: absolute;
+    top: 28%;
+    right: 70px;
+  }
+}

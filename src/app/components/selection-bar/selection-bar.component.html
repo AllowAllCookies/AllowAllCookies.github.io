@@ -1,0 +1,15 @@
+<div class="selectCounty">
+  <mat-form-field appearance="fill">
+    <mat-label>Välj län</mat-label>
+    <mat-select
+      [(ngModel)]="selectedValue"
+      name="county"
+      #t
+      (ngModelChange)="onChange(t.value)"
+    >
+      <mat-option *ngFor="let county of counties" [value]="county.countyNo">
+        {{ county.countyName }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

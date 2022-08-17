@@ -1,0 +1,59 @@
+<div class="container">
+  <mat-list
+    *ngFor="
+      let msgParkingListToParkingAreaDetail of msgParkingListToParkingAreaDetails
+    "
+  >
+    <iframe
+      style="height: 250px; width: 100%"
+      [src]="srcUrl"
+      allowfullscreen
+    ></iframe>
+    <mat-list-item *ngIf="msgParkingListToParkingAreaDetail.Geometry.WGS84"
+      >Koordinater:
+      {{
+        msgParkingListToParkingAreaDetail.Geometry.WGS84.split(" ")[2].split(
+          ")"
+        )[0]
+      }}
+      {{
+        msgParkingListToParkingAreaDetail.Geometry.WGS84.split("(")[1].split(
+          " "
+        )[0]
+      }}</mat-list-item
+    >
+    <mat-list-item *ngIf="msgParkingListToParkingAreaDetail.Name"
+      >Namn: {{ msgParkingListToParkingAreaDetail.Name }}</mat-list-item
+    >
+    <mat-list-item *ngIf="msgParkingListToParkingAreaDetail.Description"
+      >Beskrivning:
+      {{ msgParkingListToParkingAreaDetail.Description }}</mat-list-item
+    >
+    <mat-list-item
+      *ngIf="msgParkingListToParkingAreaDetail.VehicleCharacteristics[0]"
+      >Parkeringsplats:
+      {{
+        msgParkingListToParkingAreaDetail.VehicleCharacteristics[0]
+          .NumberOfSpaces
+      }}</mat-list-item
+    >
+    <mat-list-item
+      *ngIf="msgParkingListToParkingAreaDetail.VehicleCharacteristics[1]"
+      >Lastbilsplats:
+      {{
+        msgParkingListToParkingAreaDetail.VehicleCharacteristics[1]
+          .NumberOfSpaces
+      }}</mat-list-item
+    >
+    <button
+      mat-icon-button
+      class="btn"
+      #t
+      (click)="onClick(t.value)"
+      aria-label="add favorite"
+      [value]="msgParkingListToParkingAreaDetail.Name"
+    >
+      <mat-icon>favorite</mat-icon>
+    </button>
+  </mat-list>
+</div>

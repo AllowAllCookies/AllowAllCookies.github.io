@@ -1,0 +1,12 @@
+<app-selection-bar
+  (msgToParkingList)="msgToParkingList($event)"
+></app-selection-bar>
+<app-checkboxes (msgToParkingList)="msgToParkingList($event)"></app-checkboxes>
+<mat-divider></mat-divider>
+<app-parking-list
+  (msgToParkingAreaDetails)="msgToParkingAreaDetails($event)"
+  [msgSelectionBarToParkingList]="msgSelectionBarToParkingList"
+></app-parking-list>
+<app-parking-area-details
+  [msgParkingListToParkingAreaDetails]="msgParkingListToParkingAreaDetails"
+></app-parking-area-details>

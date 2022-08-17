@@ -1,0 +1,11 @@
+<section class="checkboxes">
+  <ul>
+    <mat-checkbox
+      *ngFor="let task of checklist"
+      [(ngModel)]="task.checked"
+      (ngModelChange)="checkboxesUpdate()"
+    >
+      {{ task.name }}
+    </mat-checkbox>
+  </ul>
+</section>

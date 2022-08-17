@@ -1,0 +1,15 @@
+<div class="container">
+  <mat-selection-list class="parkingList" [multiple]="false">
+    <mat-list-option
+      #t
+      (click)="onClick(t.value)"
+      *ngFor="let nameOfParkingArea of msgSelectionBarToParkingList"
+      [value]="nameOfParkingArea.Id"
+    >
+      <div mat-line>{{ nameOfParkingArea.Name }}</div>
+      <div mat-line class="description">
+        {{ nameOfParkingArea.DistanceToNearestCity }}
+      </div>
+    </mat-list-option>
+  </mat-selection-list>
+</div>

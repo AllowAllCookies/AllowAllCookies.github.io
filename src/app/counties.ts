@@ -1,0 +1,25 @@
+import { County } from './countyModel';
+
+export const COUNTIES: County[] = [
+  { countyNo: 1, countyName: 'Stockholm' },
+  { countyNo: 3, countyName: 'Uppsala' },
+  { countyNo: 4, countyName: 'Södermanland' },
+  { countyNo: 5, countyName: 'Östergötland' },
+  { countyNo: 6, countyName: 'Jönköping' },
+  { countyNo: 7, countyName: 'Kronoberg' },
+  { countyNo: 8, countyName: 'Kalmar' },
+  { countyNo: 9, countyName: 'Gotland' },
+  { countyNo: 10, countyName: 'Blekinge' },
+  { countyNo: 12, countyName: 'Skåne' },
+  { countyNo: 13, countyName: 'Halland' },
+  { countyNo: 14, countyName: 'Västra Götaland' },
+  { countyNo: 17, countyName: 'Värmland' },
+  { countyNo: 18, countyName: 'Örebro' },
+  { countyNo: 19, countyName: 'Västmanland' },
+  { countyNo: 20, countyName: 'Dalarna' },
+  { countyNo: 21, countyName: 'Gävleborg' },
+  { countyNo: 22, countyName: 'Västernorrland' },
+  { countyNo: 23, countyName: 'Jämtland' },
+  { countyNo: 24, countyName: 'Västerbotten' },
+  { countyNo: 25, countyName: 'Norrbotten' },
+];
